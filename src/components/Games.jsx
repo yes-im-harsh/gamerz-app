@@ -22,7 +22,7 @@ const Games = ({
           Released: <span className="text-primary">{released}</span>
         </h2> */}
         <div className="flex flex-row">
-          <div class="badge badge-ghost mr-3 mb-1">
+          <div class="badge badge-ghost mr-2 mb-1">
             <div class="rating rating-sm flex flex-row items-center">
               <input
                 type="radio"
@@ -38,7 +38,7 @@ const Games = ({
           </div>
           <div>
             {genres?.slice(0, 2).map((item) => (
-              <div className="badge badge-ghost font-bold mr-3 mb-1">
+              <div className="badge badge-ghost font-bold mr-1 mb-1">
                 {item.name}
               </div>
             ))}

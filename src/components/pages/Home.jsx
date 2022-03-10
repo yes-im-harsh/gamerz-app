@@ -1,28 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import DateContext from "../../context/DatesContext";
 import Games from "../Games";
 import Hero from "../layout/Hero";
 import Selection from "../layout/Selection";
-const API_KEY = process.env.REACT_APP_API_KEY;
+
+// const API_KEY = process.env.REACT_APP_API_KEY;
 
 const Home = () => {
   const [state, setState] = useState([]);
-  const [month, setMonth] = useState("10");
-  const [year, setYear] = useState("19");
-
-  const random = Math.floor(Math.random() * 10);
-  console.log(random);
+  const { newmonth, newyear } = useContext(DateContext);
+  console.log(newyear);
+  console.log(newmonth);
 
   useEffect(() => {
     const getData = async () => {
       const state = await fetch(
-        `https://api.rawg.io/api/games?key=67d9f6fe9c284cfab1e49ef39919f633&dates=200${random}-0${random}-01,200${random}-0${random}-30&platforms=18,1,7`
+        `https://api.rawg.io/api/games?key=67d9f6fe9c284cfab1e49ef39919f633&dates=20${newyear}-${newmonth}-01,20${newyear}-${newmonth}-30&platforms=18,1,7`
       );
       const data = await state.json();
       console.log(data.results);
       setState(data.results);
     };
     getData();
-  }, []);
+  }, [newmonth, newyear]);
 
   return (
     <div>
