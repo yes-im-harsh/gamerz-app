@@ -13,7 +13,7 @@ const Selection = () => {
   setNewyear(year);
 
   return (
-    <div className="mb-12 flex flex-wrap justify-center">
+    <div id="select" className="mb-12 flex flex-wrap justify-center">
       <select
         className="select select-warning w-full max-w-xs mr-4"
         value={month}

@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* <Hero /> */}
+      <Hero />
       <Selection />
       <div className="flex flex-row justify-evenly flex-wrap">
         {state?.map((items) => (
