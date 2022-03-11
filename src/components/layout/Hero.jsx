@@ -25,9 +25,9 @@ const Hero = () => {
             <p class="py-6">
               This app helps users to navigate through different games.
             </p>
-            <Link to="#select" class="btn btn-primary">
+            <a href="#select" class="btn btn-primary">
               Get Started
-            </Link>
+            </a>
           </div>
         </div>
       </div>
